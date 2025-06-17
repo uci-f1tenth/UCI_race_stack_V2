@@ -1,0 +1,10 @@
+**/.git
+*.pyc
+finished_experiments/**
+logs/
+*.tar
+*.tar.gz
+data
+venv
+experiments
+./logs/**
