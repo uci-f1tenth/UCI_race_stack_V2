@@ -1,3 +1,0 @@
-cmapy
-scikit-image
-

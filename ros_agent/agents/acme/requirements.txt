@@ -1,4 +1,0 @@
-numpy==1.16.1
-tensorflow-gpu>=2.3.0
-osrf-pycommon
-
