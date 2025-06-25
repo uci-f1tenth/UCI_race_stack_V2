@@ -14,6 +14,8 @@ import os
 import pathlib
 import sys
 
+from racecar_gym.envs.gym_api.multi_agent_race import MultiAgentRaceEnv
+
 
 sys.path.append(str(pathlib.Path(__file__).parent))
 
@@ -145,16 +147,14 @@ def make_dataset(episodes, config):
 
 
 def make_env(config, mode, gui=True):
-    env = wrappers.RaceCarBaseEnv(
-        track=config.racecar_track, task=config.racecar_task, rendering=gui
-    )
+    env = wrappers.RaceCarBaseEnv(track=config.track, task=config.task, rendering=gui)
     env = wrappers.RaceCarWrapper(env, agent_id="A")
     env = wrappers.ActionRepeat(env, config.action_repeat)
     env = wrappers.ReduceActionSpace(env, low=[0.005, -1.0], high=[1.0, 1.0])
     env = wrappers.OccupancyMapObs(env)
 
     if mode == "train":
-        if env.n_agents > 1:
+        if len(env.agents) > 1:
             env = wrappers.FixedResetMode(env, mode="random_ball")
         else:
             env = wrappers.FixedResetMode(env, mode="random")
@@ -164,10 +164,6 @@ def make_env(config, mode, gui=True):
         env = wrappers.TimeLimit(env, config.time_limit_test / config.action_repeat)
     else:
         raise ValueError(f"Unknown mode for racecar environment: {mode}")
-
-    env = wrappers.SelectAction(env, key="action")
-    env = wrappers.UUID(env)
-
     return env
 
 
@@ -176,12 +172,11 @@ def main(config):
     if config.deterministic_run:
         tools.enable_deterministic_run()
     logdir = pathlib.Path(config.logdir).expanduser()
-    config.traindir = config.traindir or logdir / "train_eps"
-    config.evaldir = config.evaldir or logdir / "eval_eps"
+    config.traindir = logdir / "train_eps"
+    config.evaldir = logdir / "eval_eps"
     config.steps //= config.action_repeat
     config.eval_every //= config.action_repeat
     config.log_every //= config.action_repeat
-    config.time_limit //= config.action_repeat
 
     print("Logdir", logdir)
     logdir.mkdir(parents=True, exist_ok=True)

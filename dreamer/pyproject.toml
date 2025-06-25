@@ -8,7 +8,7 @@ dependencies = [
     "numpy>=2.2.3",
     "ruamel-yaml>=0.18.10",
     "torch>=2.6.0",
-    "racecar-gym",
+    "racecar_gym",
     "pillow>=11.2.1",
 ]
 
@@ -23,4 +23,4 @@ allow-direct-references = true
 packages = ["dream"]
 
 [tool.uv.sources]
-racecar-gym = { workspace = true }
+racecar_gym = { workspace = true }

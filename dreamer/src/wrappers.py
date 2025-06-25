@@ -2,7 +2,6 @@ import gymnasium as gym
 import numpy as np
 from PIL import Image
 from scipy import ndimage
-
 from racecar_gym.envs.gym_api.multi_agent_race import MultiAgentRaceEnv
 from racecar_gym.envs.scenarios import MultiAgentScenario
 
@@ -13,10 +12,11 @@ class RaceCarBaseEnv:
     def __init__(self, track, task, rendering=False):
         env_id = track
         if env_id not in envs.keys():
-            scenario = MultiAgentScenario.from_spec(
-                f"scenarios/{task}/{track}.yml", rendering=rendering
+            scenario = f"dreamer/scenarios/{task}/{track}.yml"
+            envs[env_id] = MultiAgentRaceEnv(
+                scenario=scenario,
+                render_mode="human" if rendering else "rgb_array_follow",
             )
-            envs[env_id] = MultiAgentRaceEnv(scenario=scenario)
         self._env = envs[env_id]
 
     def __getattr__(self, name):
