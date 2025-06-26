@@ -4,69 +4,83 @@ defaults:
   evaldir: "log/eval_dir"
   offline_traindir: "log/offline/train_dir"
   offline_evaldir: "log/offline/eval_dir"
-  datetime: ""
-  dataset_size: 1000000
   seed: 0
   deterministic_run: False
   steps: 1.0
-  eval_every: 10000.0
-  log_every: 1000.0
-  log_scalars: True
-  log_images: True
-  log_videos: True
-  reset_every: 0
-  gpu_growth: True
-  precision: 32
   parallel: False
-  obs_type: "lidar"
+  eval_every: 10000.0
+  eval_episode_num: 10
+  log_every: 1000.0
+  reset_every: 0
+  device: "cpu:0"
+  compile: False
+  precision: 32
+  debug: True
+  video_pred_log: True
   # Environment
-  envs: 1
   track: "austria"
   task: "max_progress"
+  size: [64, 64]
+  envs: 1
   action_repeat: 4
-  eval_episodes: 5
-  time_limit_train: 2000
-  time_limit_test: 4000
+  time_limit: 1000
+  grayscale: False
   prefill_agent: "gap_follower"
   prefill: 5000
-  eval_noise: 0.0
-  clip_rewards: "none"
-  clip_rewards_min: -1
-  clip_rewards_max: 1
+  reward_EMA: True
   # Model
-  encoded_obs_dim: 1080
-  deter_size: 200
-  stoch_size: 30
-  num_units: 400
-  reward_out_dist: "normal"
-  dense_act: "elu"
-  cnn_act: "relu"
-  pcont: True
-  free_nats: 3.0
-  kl_scale: 1.0
-  pcont_scale: 10.0
+  dyn_hidden: 512
+  dyn_deter: 512
+  dyn_stoch: 32
+  dyn_discrete: 32
+  dyn_rec_depth: 1
+  dyn_mean_act: "none"
+  dyn_std_act: "sigmoid2"
+  dyn_min_std: 0.1
+  grad_heads: ["decoder", "reward", "cont"]
+  units: 512
+  act: "SiLU"
+  norm: true
+  encoder: {mlp_keys: "lidar", cnn_keys: "$^", act: "SiLU", norm: True, mlp_layers: 6, mlp_units: 1024, symlog_inputs: True, cnn_depth: 32, kernel_size: 4, minres: 4}
+  decoder: {mlp_keys: "lidar", cnn_keys: "$^", act: "SiLU", norm: True, cnn_depth: 32, kernel_size: 4, minres: 4, mlp_layers: 4, mlp_units: 512, cnn_sigmoid: True, image_dist: "mse", vector_dist: "normal", outscale: 1.0}
+  actor: {layers: 2, dist: normal, entropy: 3e-4, unimix_ratio: 0.01, std: learned, min_std: 0.1, max_std: 1.0, temp: 0.1, lr: 3e-5, eps: 1e-5, grad_clip: 100.0, outscale: 1.0}
+  critic: {layers: 2, dist: symlog_disc, slow_target: true, slow_target_update: 1, slow_target_fraction: 0.02, lr: 3e-5, eps: 1e-5, grad_clip: 100.0, outscale: 0.0}
+  reward_head: {layers: 2, dist: symlog_disc, loss_scale: 1.0, outscale: 0.0}
+  cont_head: {layers: 2, loss_scale: 1.0, outscale: 1.0}
+  dyn_scale: 0.5
+  rep_scale: 0.1
+  kl_free: 1.0
   weight_decay: 0.0
-  weight_decay_pattern: ".*"
-  expl_until: 0
+  unimix_ratio: 0.01
+  initial: "learned"
   # Training
   batch_size: 50
   batch_length: 50
   train_ratio: 512
-  train_every: 1000
-  train_steps: 100
   pretrain: 100
   model_lr: 0.0006
-  value_lr: 0.00008
-  actor_lr: 0.00008
+  opt_eps: 1e-8
   grad_clip: 1.0
-  dataset_balance: False
+  dataset_size: 1000000
+  opt: "adam"
+  time_limit_train: 2000
+  time_limit_test: 4000
   # Behavior
   discount: 0.99
-  disclam: 0.95
-  horizon: 15
-  action_dist: "tanh_normal"
-  action_init_std: 5.0
-  expl: "additive_gaussian"
-  expl_amount: 0.3
-  expl_decay: 0.0
-  expl_min: 0.3
+  discount_lambda: 0.95
+  imag_horizon: 15
+  imag_gradient: "dynamics"
+  imag_gradient_mix: 0.0
+  eval_state_mean: False
+  # Exploration
+  expl_behavior: "greedy"
+  expl_until: 0
+  expl_extr_scale: 0.0
+  expl_intr_scale: 1.0
+  disag_target: "stoch"
+  disag_log: True
+  disag_models: 10
+  disag_offset: 1
+  disag_layers: 4
+  disag_units: 400
+  disag_action_cond: False

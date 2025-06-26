@@ -5,7 +5,9 @@ from torch import nn
 import networks
 import tools
 
-to_np = lambda x: x.detach().cpu().numpy()
+
+def to_np(x):
+    return x.detach().cpu().numpy()
 
 
 class RewardEMA:
@@ -97,7 +99,9 @@ class WorldModel(nn.Module):
             use_amp=self._use_amp,
         )
         print(
-            f"Optimizer model_opt has {sum(param.numel() for param in self.parameters())} variables."
+            f"Optimizer model_opt has {
+                sum(param.numel() for param in self.parameters())
+            } variables."
         )
         # other losses are scaled by 1.0.
         self._scales = dict(
@@ -176,7 +180,6 @@ class WorldModel(nn.Module):
             k: torch.tensor(v, device=self._config.device, dtype=torch.float32)
             for k, v in obs.items()
         }
-        obs["image"] = obs["image"] / 255.0
         if "discount" in obs:
             obs["discount"] *= self._config.discount
             # (batch_size, batch_length) -> (batch_size, batch_length, 1)
@@ -195,17 +198,17 @@ class WorldModel(nn.Module):
         states, _ = self.dynamics.observe(
             embed[:6, :5], data["action"][:6, :5], data["is_first"][:6, :5]
         )
-        recon = self.heads["decoder"](self.dynamics.get_feat(states))["image"].mode()[
+        recon = self.heads["decoder"](self.dynamics.get_feat(states))["lidar"].mode()[
             :6
         ]
         reward_post = self.heads["reward"](self.dynamics.get_feat(states)).mode()[:6]
         init = {k: v[:, -1] for k, v in states.items()}
         prior = self.dynamics.imagine_with_action(data["action"][:6, 5:], init)
-        openl = self.heads["decoder"](self.dynamics.get_feat(prior))["image"].mode()
+        openl = self.heads["decoder"](self.dynamics.get_feat(prior))["lidar"].mode()
         reward_prior = self.heads["reward"](self.dynamics.get_feat(prior)).mode()
         # observed image is given until 5 steps
         model = torch.cat([recon[:, :5], openl], 1)
-        truth = data["image"][:6]
+        truth = data["lidar"][:6]
         model = model
         error = (model - truth + 1.0) / 2.0
 
@@ -264,7 +267,9 @@ class ImagBehavior(nn.Module):
             **kw,
         )
         print(
-            f"Optimizer actor_opt has {sum(param.numel() for param in self.actor.parameters())} variables."
+            f"Optimizer actor_opt has {
+                sum(param.numel() for param in self.actor.parameters())
+            } variables."
         )
         self._value_opt = tools.Optimizer(
             "value",
@@ -275,7 +280,9 @@ class ImagBehavior(nn.Module):
             **kw,
         )
         print(
-            f"Optimizer value_opt has {sum(param.numel() for param in self.value.parameters())} variables."
+            f"Optimizer value_opt has {
+                sum(param.numel() for param in self.value.parameters())
+            } variables."
         )
         if self._config.reward_EMA:
             # register ema_vals to nn.Module for enabling torch.save and torch.load
@@ -347,7 +354,10 @@ class ImagBehavior(nn.Module):
 
     def _imagine(self, start, policy, horizon):
         dynamics = self._world_model.dynamics
-        flatten = lambda x: x.reshape([-1] + list(x.shape[2:]))
+
+        def flatten(x):
+            return x.reshape([-1] + list(x.shape[2:]))
+
         start = {k: flatten(v) for k, v in start.items()}
 
         def step(prev, _):

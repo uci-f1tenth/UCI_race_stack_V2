@@ -17,7 +17,8 @@ from torch import distributions as torchd
 from torch.utils.tensorboard import SummaryWriter
 
 
-to_np = lambda x: x.detach().cpu().numpy()
+def to_np(x):
+    return x.detach().cpu().numpy()
 
 
 def symlog(x):
@@ -306,18 +307,42 @@ def save_episodes(directory, episodes):
     return True
 
 
+def _as_array(x):
+    return np.asarray(x) if isinstance(x, (list, tuple)) else x
+
+
+def _pad_to_shape(arr, target_shape):
+    pad_width = [(0, t - s) for s, t in zip(arr.shape, target_shape)]
+    return np.pad(arr, pad_width, mode="constant")
+
+
+def _harmonise_rank(a, b):
+    if a.ndim == b.ndim:
+        return a, b
+    if a.ndim < b.ndim and b.shape[-1] == 1:
+        b = b.squeeze(-1)
+    elif b.ndim < a.ndim and a.shape[-1] == 1:
+        a = a.squeeze(-1)
+    return a, b
+
+
 def from_generator(generator, batch_size):
     while True:
-        batch = []
-        for _ in range(batch_size):
-            batch.append(next(generator))
-        data = {}
-        for key in batch[0].keys():
-            data[key] = []
-            for i in range(batch_size):
-                data[key].append(batch[i][key])
-            data[key] = np.stack(data[key], 0)
-        yield data
+        batch = [next(generator) for _ in range(batch_size)]
+        keys = batch[0].keys()
+        stacked = {}
+        for k in keys:
+            samples = [_as_array(b[k]) for b in batch]
+            first = samples[0]
+            for i in range(1, len(samples)):
+                first, samples[i] = _harmonise_rank(first, samples[i])
+            samples[0] = first  # save possibly modified first
+            shapes = np.array([s.shape for s in samples])
+            target_shape = shapes.max(axis=0)
+            samples = [_pad_to_shape(s, target_shape) for s in samples]
+            stacked[k] = np.stack(samples, axis=0)
+
+        yield stacked
 
 
 def sample_episodes(episodes, length, seed=0):
@@ -348,13 +373,26 @@ def sample_episodes(episodes, length, seed=0):
                 # 'is_first' comes after 'is_last'
                 index = 0
                 possible = length - size
-                ret = {
-                    k: np.append(
-                        ret[k], v[index : min(index + possible, total)].copy(), axis=0
-                    )
-                    for k, v in episode.items()
-                    if "log_" not in k
-                }
+
+                ret_new = {}
+                for k, v in episode.items():
+                    v_slice = np.array(v[index : min(index + possible, total)])
+                    if len(ret[k]) == 0:
+                        ret[k] = np.empty((0,) + v_slice.shape[1:], dtype=v_slice.dtype)
+                    else:
+                        ret[k] = np.array(ret[k])
+
+                    if ret[k].ndim != v_slice.ndim:
+                        if v_slice.ndim > ret[k].ndim and v_slice.shape[-1] == 1:
+                            v_slice = v_slice.squeeze(-1)
+                        elif ret[k].ndim > v_slice.ndim and ret[k].shape[-1] == 1:
+                            v_slice = v_slice[:, None]
+                    if ret[k].size == 0:
+                        ret_new[k] = v_slice
+                    else:
+                        ret_new[k] = np.concatenate((ret[k], v_slice), axis=0)
+
+                ret = ret_new
                 if "is_first" in ret:
                     ret["is_first"][size] = True
             size = len(next(iter(ret.values())))
@@ -675,7 +713,9 @@ def static_scan_for_lambda_return(fn, inputs, start):
     flag = True
     for index in indices:
         # (inputs, pcont) -> (inputs[index], pcont[index])
-        inp = lambda x: (_input[x] for _input in inputs)
+        def inp(x):
+            return (_input[x] for _input in inputs)
+
         last = fn(last, *inp(index))
         if flag:
             outputs = last
@@ -744,7 +784,7 @@ class Optimizer:
             "sgd": lambda: torch.optim.SGD(parameters, lr=lr),
             "momentum": lambda: torch.optim.SGD(parameters, lr=lr, momentum=0.9),
         }[opt]()
-        self._scaler = torch.cuda.amp.GradScaler(enabled=use_amp)
+        self._scaler = torch.amp.GradScaler("cuda", enabled=use_amp)
 
     def __call__(self, loss, params, retain_graph=True):
         assert len(loss.shape) == 0, loss.shape
@@ -797,7 +837,10 @@ def static_scan(fn, inputs, start):
     indices = range(inputs[0].shape[0])
     flag = True
     for index in indices:
-        inp = lambda x: (_input[x] for _input in inputs)
+
+        def inp(x):
+            return (_input[x] for _input in inputs)
+
         last = fn(last, *inp(index))
         if flag:
             if type(last) == type({}):
@@ -997,4 +1040,27 @@ def recursively_load_optim_state_dict(obj, optimizers_state_dicts):
         obj_now = obj
         for key in keys:
             obj_now = getattr(obj_now, key)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
+        obj_now.load_state_dict(state_dict)
         obj_now.load_state_dict(state_dict)

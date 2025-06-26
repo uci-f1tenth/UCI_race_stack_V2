@@ -1,9 +1,10 @@
-import gymnasium as gym
-import numpy as np
-from PIL import Image
-from scipy import ndimage
-from racecar_gym.envs.gym_api.multi_agent_race import MultiAgentRaceEnv
 from racecar_gym.envs.scenarios import MultiAgentScenario
+from racecar_gym.envs.gym_api.multi_agent_race import MultiAgentRaceEnv
+from scipy import ndimage
+from PIL import Image
+import numpy as np
+import gymnasium as gym
+import uuid
 
 envs = {}
 
@@ -18,6 +19,7 @@ class RaceCarBaseEnv:
                 render_mode="human" if rendering else "rgb_array_follow",
             )
         self._env = envs[env_id]
+        self.id = f"{track}-{uuid.uuid4().hex[:6]}"
 
     def __getattr__(self, name):
         return getattr(self._env, name)
@@ -73,19 +75,29 @@ class RaceCarWrapper:
             i: {"motor": actions[i][0], "steering": actions[i][1]}
             for i in self.agent_ids
         }
-        obs, reward, done, info = self._env.step(actions)
+        obs, reward, done, _, info = self._env.step(actions)
         for agent_id in self.agent_ids:
             obs[agent_id]["speed"] = np.linalg.norm(info[agent_id]["velocity"][:3])
             if "low_res_camera" in obs[agent_id]:
                 obs[agent_id]["image"] = obs[agent_id]["low_res_camera"]
+            else:
+                obs[agent_id]["image"] = np.zeros((64, 64, 3), dtype=np.uint8)
+            obs[agent_id]["is_first"] = False
+            obs[agent_id]["is_terminal"] = done[agent_id]
         return obs, reward, done, info
 
     def reset(self, **kwargs):
-        obs = self._env.reset(**kwargs)
+        result = self._env.reset(**kwargs)
+        obs, info = result if isinstance(result, tuple) else (result, {})
+
         for agent_id in self.agent_ids:
             obs[agent_id]["speed"] = 0.0
             if "low_res_camera" in obs[agent_id]:
                 obs[agent_id]["image"] = obs[agent_id]["low_res_camera"]
+            else:
+                obs[agent_id]["image"] = np.zeros((64, 64, 3), dtype=np.uint8)
+            obs[agent_id]["is_first"] = True
+            obs[agent_id]["is_terminal"] = False
         return obs
 
     def render(self, **kwargs):
@@ -100,8 +112,16 @@ class FixedResetMode:
         self._env = env
         self._mode = mode
 
+    @property
+    def action_space(self):
+        return self._env.action_space
+
+    @property
+    def observation_space(self):
+        return self._env.observation_space
+
     def reset(self):
-        return self._env.reset(mode=self._mode)
+        return self._env.reset()
 
     def __getattr__(self, name):
         return getattr(self._env, name)
@@ -114,6 +134,14 @@ class ActionRepeat:
 
     def __getattr__(self, name):
         return getattr(self._env, name)
+
+    @property
+    def action_space(self):
+        return self._env.action_space
+
+    @property
+    def observation_space(self):
+        return self._env.observation_space
 
     def step(self, action):
         obs, info = None, None
@@ -139,8 +167,20 @@ class ReduceActionSpace:
     def __getattr__(self, name):
         return getattr(self._env, name)
 
+    @property
+    def action_space(self):
+        return self._env.action_space
+
+    @property
+    def observation_space(self):
+        return self._env.observation_space
+
     def _normalize(self, action):
-        return (action + 1) / 2 * (self._high - self._low) + self._low
+        if isinstance(action, dict):
+            arr = action["action"]
+        else:
+            arr = action
+        return (arr + 1) / 2 * (self._high - self._low) + self._low
 
     def step(self, action):
         original = {
@@ -158,6 +198,14 @@ class TimeLimit:
 
     def __getattr__(self, name):
         return getattr(self._env, name)
+
+    @property
+    def action_space(self):
+        return self._env.action_space
+
+    @property
+    def observation_space(self):
+        return self._env.observation_space
 
     def step(self, action):
         assert self._step is not None, "Must reset environment."
@@ -447,3 +495,35 @@ class OccupancyMapObs:
         for agent_id in self._env.agent_ids:
             obs[agent_id]["lidar_occupancy"] = np.zeros(self._map_size, dtype=np.uint8)
         return obs
+
+
+class SingleAgentFlattenWrapper:
+    def __init__(self, env, agent_id="A"):
+        self._env = env
+        self._id = agent_id
+
+    def __getattr__(self, name):
+        return getattr(self._env, name)
+
+    @property
+    def observation_space(self):
+        return self._env.observation_space.spaces[self._id]
+
+    @property
+    def action_space(self):
+        return self._env.action_space.spaces[self._id]
+
+    def step(self, action):
+        # Wrap single-agent action in dict
+        action = {self._id: action}
+        obss, rewards, dones, infos = self._env.step(action)
+        return (
+            obss[self._id],
+            rewards[self._id],
+            dones[self._id],
+            infos[self._id],
+        )
+
+    def reset(self, **kwargs):
+        obss = self._env.reset(**kwargs)
+        return obss[self._id]

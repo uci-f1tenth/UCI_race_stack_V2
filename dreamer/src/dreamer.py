@@ -13,8 +13,7 @@ import functools
 import os
 import pathlib
 import sys
-
-from racecar_gym.envs.gym_api.multi_agent_race import MultiAgentRaceEnv
+import gymnasium as gym
 
 
 sys.path.append(str(pathlib.Path(__file__).parent))
@@ -152,9 +151,10 @@ def make_env(config, mode, gui=True):
     env = wrappers.ActionRepeat(env, config.action_repeat)
     env = wrappers.ReduceActionSpace(env, low=[0.005, -1.0], high=[1.0, 1.0])
     env = wrappers.OccupancyMapObs(env)
+    env = wrappers.SingleAgentFlattenWrapper(env)
 
     if mode == "train":
-        if len(env.agents) > 1:
+        if env.n_agents > 1:
             env = wrappers.FixedResetMode(env, mode="random_ball")
         else:
             env = wrappers.FixedResetMode(env, mode="random")
@@ -208,7 +208,7 @@ def main(config):
         eval_envs = [Damy(env) for env in eval_envs]
     acts = train_envs[0].action_space
     print("Action Space", acts)
-    config.num_actions = acts.n if hasattr(acts, "n") else acts.shape[0]
+    config.num_actions = gym.spaces.utils.flatdim(acts)
 
     state = None
     if not config.offline_traindir:
