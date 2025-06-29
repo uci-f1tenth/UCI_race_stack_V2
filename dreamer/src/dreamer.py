@@ -64,8 +64,13 @@ class Dreamer(nn.Module):
                 if self._should_pretrain()
                 else self._should_train(step)
             )
+            print(f"Training steps: {range(steps)}")
             for _ in range(steps):
-                self._train(next(self._dataset))
+                print("stupid baka")
+                print("self._dataset:", self._dataset)
+                print("inner generator:", self._dataset.gi_frame.f_locals['generator'])  # Inspect the inner generator if possible
+                tmp = next(self._dataset)
+                self._train(tmp)
                 self._update_count += 1
                 self._metrics["update_count"] = self._update_count
             if self._should_log(step):
@@ -116,6 +121,7 @@ class Dreamer(nn.Module):
         return policy_output, state
 
     def _train(self, data):
+        print("_train called")
         metrics = {}
         post, context, mets = self._wm._train(data)
         metrics.update(mets)
@@ -277,9 +283,14 @@ def main(config):
                 episodes=config.eval_episode_num,
             )
             if config.video_pred_log:
+                print("Logging video predictions.")
                 video_pred = agent._wm.video_pred(next(eval_dataset))
                 logger.video("eval_openl", to_np(video_pred))
         print("Start training.")
+        if len(train_eps) < 5:
+            print("Waiting for more experience before training...")
+            continue  # Skip training step
+        print("Replay buffer length:", len(train_eps))
         state = tools.simulate(
             agent,
             train_envs,

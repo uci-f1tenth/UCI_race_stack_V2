@@ -164,6 +164,7 @@ def simulate(
                 add_to_cache(cache, envs[index].id, t)
                 # replace obs with done by initial state
                 obs[index] = result
+        # print("env reset success")
         # step agents
         obs = {k: np.stack([o[k] for o in obs]) for k in obs[0] if "log_" not in k}
         action, agent_state = agent(obs, done, agent_state)
@@ -175,6 +176,7 @@ def simulate(
         else:
             action = np.array(action)
         assert len(action) == len(envs)
+        # print("agents stepped success")
         # step envs
         results = [e.step(a) for e, a in zip(envs, action)]
         results = [r() for r in results]
@@ -186,6 +188,7 @@ def simulate(
         length += 1
         step += len(envs)
         length *= 1 - done
+        # print("envs stepped success")
         # add to cache
         for a, result, env in zip(action, results, envs):
             o, r, d, info = result
@@ -198,6 +201,7 @@ def simulate(
             transition["reward"] = r
             transition["discount"] = info.get("discount", np.array(1 - float(d)))
             add_to_cache(cache, env.id, transition)
+        # print("cache updated success")
 
         if done.any():
             indices = [index for index, d in enumerate(done) if d]
@@ -341,9 +345,10 @@ def from_generator(generator, batch_size):
             target_shape = shapes.max(axis=0)
             samples = [_pad_to_shape(s, target_shape) for s in samples]
             stacked[k] = np.stack(samples, axis=0)
-
+        #print("stacked:", stacked)
+        print("yielding stacked")
         yield stacked
-
+        print("yielded stacked")
 
 def sample_episodes(episodes, length, seed=0):
     np_random = np.random.RandomState(seed)
