@@ -67,9 +67,11 @@ class Dreamer(nn.Module):
             print(f"Training steps: {range(steps)}")
             for _ in range(steps):
                 print("stupid baka")
-                print("self._dataset:", self._dataset)
-                print("inner generator:", self._dataset.gi_frame.f_locals['generator'])  # Inspect the inner generator if possible
-                tmp = next(self._dataset)
+                try:
+                    tmp = next(self._dataset)
+                except StopIteration:
+                    print(" Dataset is empty, skipping training update.")
+                    break
                 self._train(tmp)
                 self._update_count += 1
                 self._metrics["update_count"] = self._update_count
@@ -172,7 +174,6 @@ def make_env(config, mode, gui=True):
         raise ValueError(f"Unknown mode for racecar environment: {mode}")
     return env
 
-
 def main(config):
     tools.set_seed_everywhere(config.seed)
     if config.deterministic_run:
@@ -253,6 +254,8 @@ def main(config):
     print("Simulate agent.")
     train_dataset = make_dataset(train_eps, config)
     eval_dataset = make_dataset(eval_eps, config)
+    print(f"Total episodes in train_eps: {len(train_eps)}")
+    print(f"Episode IDs: {list(train_eps.keys())}")
     agent = Dreamer(
         train_envs[0].observation_space,
         train_envs[0].action_space,
@@ -266,6 +269,20 @@ def main(config):
         agent.load_state_dict(checkpoint["agent_state_dict"])
         tools.recursively_load_optim_state_dict(agent, checkpoint["optims_state_dict"])
         agent._should_pretrain._once = False
+
+    if len(train_eps) == 0:
+        print("🛠️ Bootstrapping replay buffer with initial rollouts...")
+        # Freeze training to ensure agent acts without dataset dependency
+        rollout_policy = functools.partial(agent, training=False)
+        tools.simulate(
+            rollout_policy,
+            train_envs,
+            train_eps,
+            config.traindir,
+            logger,
+            steps=config.batch_length * config.batch_size  # enough to fill at least one batch
+        )
+        print(f"Bootstrapped: train_eps contains {len(train_eps)} episodes now.")
 
     # make sure eval will be executed once after config.steps
     while agent._step < config.steps + config.eval_every:
@@ -287,10 +304,6 @@ def main(config):
                 video_pred = agent._wm.video_pred(next(eval_dataset))
                 logger.video("eval_openl", to_np(video_pred))
         print("Start training.")
-        if len(train_eps) < 5:
-            print("Waiting for more experience before training...")
-            continue  # Skip training step
-        print("Replay buffer length:", len(train_eps))
         state = tools.simulate(
             agent,
             train_envs,
