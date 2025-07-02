@@ -195,4 +195,3 @@ cython_debug/
 
 # .npz to prevent destroying github with data
 .npz
-.jsonl
