@@ -2,17 +2,17 @@ defaults:
   logdir: "log/log_dir"
   traindir: "log/train_dir"
   evaldir: "log/eval_dir"
-  offline_traindir: "log/offline/train_dir"
-  offline_evaldir: "log/offline/eval_dir"
+  offline_traindir: null # "log/offline/train_dir"
+  offline_evaldir: null # "log/offline/eval_dir"
   seed: 0
   deterministic_run: False
-  steps: 1.0
+  steps: 1000000
   parallel: False
-  eval_every: 10000.0
+  eval_every: 10000
   eval_episode_num: 10
   log_every: 1000.0
   reset_every: 0
-  device: "cpu:0"
+  device: "cuda:0"
   compile: False
   precision: 32
   debug: True

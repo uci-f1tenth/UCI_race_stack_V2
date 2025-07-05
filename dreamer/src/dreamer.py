@@ -254,8 +254,6 @@ def main(config):
     print("Simulate agent.")
     train_dataset = make_dataset(train_eps, config)
     eval_dataset = make_dataset(eval_eps, config)
-    print(f"Total episodes in train_eps: {len(train_eps)}")
-    print(f"Episode IDs: {list(train_eps.keys())}")
     agent = Dreamer(
         train_envs[0].observation_space,
         train_envs[0].action_space,
@@ -270,21 +268,23 @@ def main(config):
         tools.recursively_load_optim_state_dict(agent, checkpoint["optims_state_dict"])
         agent._should_pretrain._once = False
 
-    if len(train_eps) == 0:
-        print("🛠️ Bootstrapping replay buffer with initial rollouts...")
-        # Freeze training to ensure agent acts without dataset dependency
-        rollout_policy = functools.partial(agent, training=False)
-        tools.simulate(
-            rollout_policy,
-            train_envs,
-            train_eps,
-            config.traindir,
-            logger,
-            steps=config.batch_length * config.batch_size  # enough to fill at least one batch
-        )
-        print(f"Bootstrapped: train_eps contains {len(train_eps)} episodes now.")
+    print(len(train_eps), "episodes in train_eps after loading.")
+    # if len(train_eps) == 0:
+    #     print("🛠️ Bootstrapping replay buffer with initial rollouts...")
+    #     # Freeze training to ensure agent acts without dataset dependency
+    #     rollout_policy = functools.partial(agent, training=False)
+    #     tools.simulate(
+    #         rollout_policy,
+    #         train_envs,
+    #         train_eps,
+    #         config.traindir,
+    #         logger,
+    #         steps=config.batch_length * config.batch_size  # enough to fill at least one batch
+    #     )
+    #     print(f"Bootstrapped: train_eps contains {len(train_eps)} episodes now.")
 
     # make sure eval will be executed once after config.steps
+    print(f"{agent._step} < {config.steps}")
     while agent._step < config.steps + config.eval_every:
         logger.write()
         if config.eval_episode_num > 0:
@@ -319,6 +319,7 @@ def main(config):
             "optims_state_dict": tools.recursively_collect_optim_state_dict(agent),
         }
         torch.save(items_to_save, logdir / "latest.pt")
+    print("Training finished, saving final model.")
     for env in train_envs + eval_envs:
         try:
             env.close()

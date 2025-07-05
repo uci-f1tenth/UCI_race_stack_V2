@@ -341,12 +341,12 @@ def from_generator(generator, batch_size):
             for i in range(1, len(samples)):
                 first, samples[i] = _harmonise_rank(first, samples[i])
             samples[0] = first  # save possibly modified first
-            print("Shapes of individual samples:")
-            for i, s in enumerate(samples):
-                print(f"Sample {i} shape: {s.shape}, dtype: {s.dtype}")
-            print("Raw samples:", samples)
-            print(f"Processing key: {k}")
-            shapes = np.array([s.shape for s in samples])
+            try:
+                shapes = np.array([s.shape for s in samples])
+            except Exception as e:
+                print(f"Processing key: {k}")
+                print(f"encountered {e}")
+                exit()
             target_shape = shapes.max(axis=0)
             samples = [_pad_to_shape(s, target_shape) for s in samples]
             stacked[k] = np.stack(samples, axis=0)

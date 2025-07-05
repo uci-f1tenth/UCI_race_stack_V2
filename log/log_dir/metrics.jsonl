@@ -1,429 +1,135 @@
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0}
-{"step": 0, "eval_return": -0.2891754686832428, "eval_length": 93.5, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0}
-{"step": 0, "eval_return": 9.522026747465134, "eval_length": 198.1, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.855569952726364, "eval_length": 201.0, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 9.477973955869675, "eval_length": 197.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0}
-{"step": 0, "eval_return": 10.151353353261948, "eval_length": 183.4, "eval_episodes": 10.0}
-{"step": 0, "dataset_size": 30.0, "train_return": 0.6991817355155945, "train_length": 30.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 64.0, "train_return": 2.0276906490325928, "train_length": 64.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 95.0, "train_return": 2.915670394897461, "train_length": 95.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 127.0, "train_return": 3.929515838623047, "train_length": 127.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 159.0, "train_return": 4.943360805511475, "train_length": 159.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 188.0, "train_return": 5.642542839050293, "train_length": 188.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 221.0, "train_return": 6.908118724822998, "train_length": 221.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 248.0, "train_return": 7.4185028076171875, "train_length": 248.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 281.0, "train_return": 8.621146202087402, "train_length": 281.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 313.0, "train_return": 9.57205867767334, "train_length": 313.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 343.0, "train_return": 10.460039138793945, "train_length": 343.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 373.0, "train_return": 11.285085678100586, "train_length": 373.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 404.0, "train_return": 12.298931121826172, "train_length": 404.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 439.0, "train_return": 13.753305435180664, "train_length": 439.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 470.0, "train_return": 14.830083847045898, "train_length": 470.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 505.0, "train_return": 16.347389221191406, "train_length": 505.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 536.0, "train_return": 17.361236572265625, "train_length": 536.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 563.0, "train_return": 17.74575424194336, "train_length": 563.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 592.0, "train_return": 18.444934844970703, "train_length": 592.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 623.0, "train_return": 19.269983291625977, "train_length": 623.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 650.0, "train_return": 19.65450096130371, "train_length": 650.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 680.0, "train_return": 20.479549407958984, "train_length": 680.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 713.0, "train_return": 21.74512481689453, "train_length": 713.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 744.0, "train_return": 22.570171356201172, "train_length": 744.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 779.0, "train_return": 24.024547576904297, "train_length": 779.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 811.0, "train_return": 25.290122985839844, "train_length": 811.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 840.0, "train_return": 25.926372528076172, "train_length": 840.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 869.0, "train_return": 26.625553131103516, "train_length": 869.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 901.0, "train_return": 27.828197479248047, "train_length": 901.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 931.0, "train_return": 28.52737808227539, "train_length": 931.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 970.0, "train_return": 30.485214233398438, "train_length": 970.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1001.0, "train_return": 31.624923706054688, "train_length": 1001.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1029.0, "train_return": 32.13530731201172, "train_length": 1029.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1059.0, "train_return": 33.02328872680664, "train_length": 1059.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1091.0, "train_return": 34.225929260253906, "train_length": 1091.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1119.0, "train_return": 34.67338180541992, "train_length": 1119.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1158.0, "train_return": 36.694149017333984, "train_length": 1158.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1188.0, "train_return": 37.45626449584961, "train_length": 1188.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1217.0, "train_return": 38.15544891357422, "train_length": 1217.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1249.0, "train_return": 39.4210205078125, "train_length": 1249.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1277.0, "train_return": 39.99433898925781, "train_length": 1277.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1310.0, "train_return": 41.25991439819336, "train_length": 1310.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1338.0, "train_return": 41.770301818847656, "train_length": 1338.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1371.0, "train_return": 42.91000747680664, "train_length": 1371.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1404.0, "train_return": 44.11265182495117, "train_length": 1404.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1432.0, "train_return": 44.62303924560547, "train_length": 1432.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1463.0, "train_return": 45.511016845703125, "train_length": 1463.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1492.0, "train_return": 46.27313232421875, "train_length": 1492.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1523.0, "train_return": 47.161109924316406, "train_length": 1523.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1551.0, "train_return": 47.73442840576172, "train_length": 1551.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1578.0, "train_return": 48.11894607543945, "train_length": 1578.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1609.0, "train_return": 48.943992614746094, "train_length": 1609.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1639.0, "train_return": 49.76904296875, "train_length": 1639.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1671.0, "train_return": 50.78289031982422, "train_length": 1671.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1695.0, "train_return": 51.23033905029297, "train_length": 1695.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1731.0, "train_return": 52.74764633178711, "train_length": 1731.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1759.0, "train_return": 53.25802993774414, "train_length": 1759.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1788.0, "train_return": 53.95721435546875, "train_length": 1788.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1816.0, "train_return": 54.46759796142578, "train_length": 1816.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1846.0, "train_return": 55.166778564453125, "train_length": 1846.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1878.0, "train_return": 56.1176872253418, "train_length": 1878.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1907.0, "train_return": 56.816871643066406, "train_length": 1907.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1938.0, "train_return": 57.70484924316406, "train_length": 1938.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1971.0, "train_return": 58.970428466796875, "train_length": 1971.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2000.0, "train_return": 59.7325439453125, "train_length": 2000.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2034.0, "train_return": 61.0610466003418, "train_length": 2034.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2062.0, "train_return": 61.57143020629883, "train_length": 2062.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2093.0, "train_return": 62.52234649658203, "train_length": 2093.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2122.0, "train_return": 63.284461975097656, "train_length": 2122.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2153.0, "train_return": 64.36123657226562, "train_length": 2153.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2183.0, "train_return": 65.24922180175781, "train_length": 2183.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2211.0, "train_return": 65.75960540771484, "train_length": 2211.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2243.0, "train_return": 66.83638000488281, "train_length": 2243.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2271.0, "train_return": 67.28382873535156, "train_length": 2271.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2301.0, "train_return": 67.9830093383789, "train_length": 2301.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2329.0, "train_return": 68.49340057373047, "train_length": 2329.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2359.0, "train_return": 69.4443130493164, "train_length": 2359.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2391.0, "train_return": 70.58402252197266, "train_length": 2391.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2420.0, "train_return": 71.22026824951172, "train_length": 2420.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2450.0, "train_return": 71.98238372802734, "train_length": 2450.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2479.0, "train_return": 72.74449920654297, "train_length": 2479.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2507.0, "train_return": 73.19195556640625, "train_length": 2507.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2538.0, "train_return": 74.20579528808594, "train_length": 2538.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2568.0, "train_return": 75.03084564208984, "train_length": 2568.0, "train_episodes": 1.0}
-{"step": 0}
-{"step": 0, "eval_return": 3.197294223308563, "eval_length": 158.3, "eval_episodes": 10.0}
-{"step": 441096, "dataset_size": 30.0, "train_return": 0.6991817355155945, "train_length": 30.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 64.0, "train_return": 2.0276906490325928, "train_length": 64.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 97.0, "train_return": 3.104468822479248, "train_length": 97.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 143.0, "train_return": 6.383889675140381, "train_length": 143.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 174.0, "train_return": 7.271869659423828, "train_length": 174.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 205.0, "train_return": 8.033984184265137, "train_length": 205.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 234.0, "train_return": 8.796098709106445, "train_length": 234.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 264.0, "train_return": 9.621146202087402, "train_length": 264.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 293.0, "train_return": 10.25739574432373, "train_length": 293.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 324.0, "train_return": 11.334173202514648, "train_length": 324.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 358.0, "train_return": 12.599749565124512, "train_length": 358.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 389.0, "train_return": 13.67652702331543, "train_length": 389.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 421.0, "train_return": 14.753305435180664, "train_length": 421.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 497.0, "train_return": 18.53618812561035, "train_length": 497.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 527.0, "train_return": 19.361236572265625, "train_length": 527.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 560.0, "train_return": 20.56387710571289, "train_length": 560.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 590.0, "train_return": 21.451858520507812, "train_length": 590.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 620.0, "train_return": 22.15104103088379, "train_length": 620.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 648.0, "train_return": 22.661422729492188, "train_length": 648.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 676.0, "train_return": 23.171810150146484, "train_length": 676.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 710.0, "train_return": 24.563247680664062, "train_length": 710.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 741.0, "train_return": 25.388296127319336, "train_length": 741.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 774.0, "train_return": 26.653873443603516, "train_length": 774.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 802.0, "train_return": 27.353055953979492, "train_length": 802.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 839.0, "train_return": 29.12209129333496, "train_length": 839.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 869.0, "train_return": 29.947139739990234, "train_length": 869.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 898.0, "train_return": 30.646320343017578, "train_length": 898.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 927.0, "train_return": 31.345500946044922, "train_length": 927.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 957.0, "train_return": 31.981752395629883, "train_length": 957.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 988.0, "train_return": 32.99559783935547, "train_length": 988.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1020.0, "train_return": 34.13530731201172, "train_length": 1020.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1050.0, "train_return": 34.96035385131836, "train_length": 1050.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1080.0, "train_return": 35.65953826904297, "train_length": 1080.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1114.0, "train_return": 36.9880485534668, "train_length": 1114.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1149.0, "train_return": 38.379486083984375, "train_length": 1149.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1178.0, "train_return": 38.826942443847656, "train_length": 1178.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1208.0, "train_return": 39.589054107666016, "train_length": 1208.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1241.0, "train_return": 40.79169845581055, "train_length": 1241.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1272.0, "train_return": 41.61674499511719, "train_length": 1272.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1303.0, "train_return": 42.504722595214844, "train_length": 1303.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1331.0, "train_return": 43.01511001586914, "train_length": 1331.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1361.0, "train_return": 43.84015655517578, "train_length": 1361.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1390.0, "train_return": 44.539337158203125, "train_length": 1390.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1421.0, "train_return": 45.42731475830078, "train_length": 1421.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1453.0, "train_return": 46.378231048583984, "train_length": 1453.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1481.0, "train_return": 46.888614654541016, "train_length": 1481.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1519.0, "train_return": 49.035247802734375, "train_length": 1519.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1548.0, "train_return": 49.73442840576172, "train_length": 1548.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1577.0, "train_return": 50.37067794799805, "train_length": 1577.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1607.0, "train_return": 50.94399642944336, "train_length": 1607.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1638.0, "train_return": 51.831974029541016, "train_length": 1638.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1668.0, "train_return": 52.657020568847656, "train_length": 1668.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1702.0, "train_return": 54.11139678955078, "train_length": 1702.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1732.0, "train_return": 54.74764633178711, "train_length": 1732.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1761.0, "train_return": 55.320960998535156, "train_length": 1761.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1789.0, "train_return": 55.89427947998047, "train_length": 1789.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1823.0, "train_return": 57.34864807128906, "train_length": 1823.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1853.0, "train_return": 58.23663330078125, "train_length": 1853.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1881.0, "train_return": 58.8099479675293, "train_length": 1881.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1912.0, "train_return": 59.82379150390625, "train_length": 1912.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1940.0, "train_return": 60.46004104614258, "train_length": 1940.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 1969.0, "train_return": 61.033355712890625, "train_length": 1969.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2000.0, "train_return": 61.98427200317383, "train_length": 2000.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2029.0, "train_return": 62.620521545410156, "train_length": 2029.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2057.0, "train_return": 63.00503921508789, "train_length": 2057.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2088.0, "train_return": 64.01888275146484, "train_length": 2088.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2120.0, "train_return": 65.03273010253906, "train_length": 2120.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2150.0, "train_return": 65.92070770263672, "train_length": 2150.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2182.0, "train_return": 66.99748229980469, "train_length": 2182.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2210.0, "train_return": 67.50787353515625, "train_length": 2210.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2242.0, "train_return": 68.58464813232422, "train_length": 2242.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2272.0, "train_return": 69.28382873535156, "train_length": 2272.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2300.0, "train_return": 69.66835021972656, "train_length": 2300.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2329.0, "train_return": 70.24166870117188, "train_length": 2329.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2358.0, "train_return": 71.0037841796875, "train_length": 2358.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2389.0, "train_return": 72.08056640625, "train_length": 2389.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2418.0, "train_return": 72.84266662597656, "train_length": 2418.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2450.0, "train_return": 73.9194564819336, "train_length": 2450.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2481.0, "train_return": 74.80743408203125, "train_length": 2481.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2510.0, "train_return": 75.5066146850586, "train_length": 2510.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2538.0, "train_return": 76.07992553710938, "train_length": 2538.0, "train_episodes": 1.0}
-{"step": 441096, "dataset_size": 2566.0, "train_return": 76.52738189697266, "train_length": 2566.0, "train_episodes": 1.0}
-{"step": 878212, "dataset_size": 30.0, "train_return": 0.6991817355155945, "train_length": 30.0, "train_episodes": 1.0}
-{"step": 878212, "dataset_size": 64.0, "train_return": 2.0276906490325928, "train_length": 64.0, "train_episodes": 1.0}
-{"step": 878212, "dataset_size": 97.0, "train_return": 3.104468822479248, "train_length": 97.0, "train_episodes": 1.0}
-{"step": 878212, "dataset_size": 143.0, "train_return": 6.383889675140381, "train_length": 143.0, "train_episodes": 1.0}
-{"step": 878212, "dataset_size": 174.0, "train_return": 7.271869659423828, "train_length": 174.0, "train_episodes": 1.0}
-{"step": 878212, "dataset_size": 205.0, "train_return": 8.033984184265137, "train_length": 205.0, "train_episodes": 1.0}
-{"step": 878212, "dataset_size": 234.0, "train_return": 8.796098709106445, "train_length": 234.0, "train_episodes": 1.0}
-{"step": 878212, "dataset_size": 264.0, "train_return": 9.621146202087402, "train_length": 264.0, "train_episodes": 1.0}
-{"step": 878212, "dataset_size": 293.0, "train_return": 10.25739574432373, "train_length": 293.0, "train_episodes": 1.0}
-{"step": 878212, "dataset_size": 324.0, "train_return": 11.334173202514648, "train_length": 324.0, "train_episodes": 1.0}
-{"step": 0}
-{"step": 0, "eval_return": 6.752989858388901, "eval_length": 182.8, "eval_episodes": 10.0}
-{"step": 0, "dataset_size": 30.0, "train_return": 0.6991817355155945, "train_length": 30.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 64.0, "train_return": 2.0276906490325928, "train_length": 64.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 97.0, "train_return": 3.104468822479248, "train_length": 97.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 143.0, "train_return": 6.383889675140381, "train_length": 143.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 174.0, "train_return": 7.271869659423828, "train_length": 174.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 205.0, "train_return": 8.033984184265137, "train_length": 205.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 234.0, "train_return": 8.796098709106445, "train_length": 234.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 264.0, "train_return": 9.621146202087402, "train_length": 264.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 293.0, "train_return": 10.25739574432373, "train_length": 293.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 324.0, "train_return": 11.334173202514648, "train_length": 324.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 358.0, "train_return": 12.599749565124512, "train_length": 358.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 389.0, "train_return": 13.67652702331543, "train_length": 389.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 421.0, "train_return": 14.753305435180664, "train_length": 421.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 454.0, "train_return": 15.893014907836914, "train_length": 454.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 484.0, "train_return": 16.718063354492188, "train_length": 484.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 515.0, "train_return": 17.606042861938477, "train_length": 515.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 545.0, "train_return": 18.3681583404541, "train_length": 545.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 574.0, "train_return": 19.004405975341797, "train_length": 574.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 603.0, "train_return": 19.57772445678711, "train_length": 603.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 636.0, "train_return": 20.591567993164062, "train_length": 636.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 665.0, "train_return": 21.416616439819336, "train_length": 665.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 698.0, "train_return": 22.55632781982422, "train_length": 698.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 739.0, "train_return": 25.080556869506836, "train_length": 739.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 779.0, "train_return": 27.41598892211914, "train_length": 779.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 808.0, "train_return": 28.24103546142578, "train_length": 808.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 838.0, "train_return": 29.066082000732422, "train_length": 838.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 867.0, "train_return": 29.7652645111084, "train_length": 867.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 896.0, "train_return": 30.527376174926758, "train_length": 896.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 925.0, "train_return": 31.16362762451172, "train_length": 925.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 956.0, "train_return": 32.114540100097656, "train_length": 956.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 988.0, "train_return": 33.19131851196289, "train_length": 988.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1020.0, "train_return": 34.33102798461914, "train_length": 1020.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1049.0, "train_return": 35.03021240234375, "train_length": 1049.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1083.0, "train_return": 36.2957878112793, "train_length": 1083.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1116.0, "train_return": 37.43549728393555, "train_length": 1116.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1152.0, "train_return": 38.889869689941406, "train_length": 1152.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1181.0, "train_return": 39.46318817138672, "train_length": 1181.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1209.0, "train_return": 39.97357177734375, "train_length": 1209.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1241.0, "train_return": 41.11328125, "train_length": 1241.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1270.0, "train_return": 41.812461853027344, "train_length": 1270.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1300.0, "train_return": 42.700443267822266, "train_length": 1300.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1332.0, "train_return": 43.7772216796875, "train_length": 1332.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1361.0, "train_return": 44.413475036621094, "train_length": 1361.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1391.0, "train_return": 45.23851776123047, "train_length": 1391.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1420.0, "train_return": 46.000633239746094, "train_length": 1420.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1453.0, "train_return": 47.140342712402344, "train_length": 1453.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1483.0, "train_return": 47.77659225463867, "train_length": 1483.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1523.0, "train_return": 50.237892150878906, "train_length": 1523.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1552.0, "train_return": 50.87413787841797, "train_length": 1552.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1580.0, "train_return": 51.32159423828125, "train_length": 1580.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1610.0, "train_return": 51.8949089050293, "train_length": 1610.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1653.0, "train_return": 54.670867919921875, "train_length": 1653.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1687.0, "train_return": 56.06230926513672, "train_length": 1687.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1717.0, "train_return": 56.824424743652344, "train_length": 1717.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1746.0, "train_return": 57.334808349609375, "train_length": 1746.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1776.0, "train_return": 58.15985107421875, "train_length": 1776.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1805.0, "train_return": 58.73316955566406, "train_length": 1805.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1833.0, "train_return": 59.243553161621094, "train_length": 1833.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1863.0, "train_return": 60.00566864013672, "train_length": 1863.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1894.0, "train_return": 60.893646240234375, "train_length": 1894.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1926.0, "train_return": 61.84456253051758, "train_length": 1926.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1966.0, "train_return": 64.242919921875, "train_length": 1966.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 1993.0, "train_return": 64.69037628173828, "train_length": 1993.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2022.0, "train_return": 65.32662200927734, "train_length": 2022.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2052.0, "train_return": 66.02581024169922, "train_length": 2052.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2082.0, "train_return": 66.66205596923828, "train_length": 2082.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2114.0, "train_return": 67.6759033203125, "train_length": 2114.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2144.0, "train_return": 68.50094604492188, "train_length": 2144.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2175.0, "train_return": 69.5147933959961, "train_length": 2175.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2205.0, "train_return": 70.46570587158203, "train_length": 2205.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2235.0, "train_return": 71.29075622558594, "train_length": 2235.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2264.0, "train_return": 71.73820495605469, "train_length": 2264.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2296.0, "train_return": 72.87791442871094, "train_length": 2296.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2324.0, "train_return": 73.32537078857422, "train_length": 2324.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2354.0, "train_return": 74.15042114257812, "train_length": 2354.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2389.0, "train_return": 75.47892761230469, "train_length": 2389.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2420.0, "train_return": 76.30397033691406, "train_length": 2420.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2452.0, "train_return": 77.2548828125, "train_length": 2452.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2485.0, "train_return": 78.39459228515625, "train_length": 2485.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2515.0, "train_return": 79.21964263916016, "train_length": 2515.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2544.0, "train_return": 79.9188232421875, "train_length": 2544.0, "train_episodes": 1.0}
-{"step": 0, "dataset_size": 2576.0, "train_return": 80.93267059326172, "train_length": 2576.0, "train_episodes": 1.0}
-{"step": 0}
-{"step": 0, "eval_return": 3.3546258211135864, "eval_length": 158.7, "eval_episodes": 10.0}
-{"step": 431196, "dataset_size": 30.0, "train_return": 0.6991817355155945, "train_length": 30.0, "train_episodes": 1.0}
-{"step": 431196, "dataset_size": 64.0, "train_return": 2.0276906490325928, "train_length": 64.0, "train_episodes": 1.0}
-{"step": 431196, "dataset_size": 97.0, "train_return": 3.104468822479248, "train_length": 97.0, "train_episodes": 1.0}
-{"step": 431196, "dataset_size": 143.0, "train_return": 6.383889675140381, "train_length": 143.0, "train_episodes": 1.0}
-{"step": 431196, "dataset_size": 174.0, "train_return": 7.271869659423828, "train_length": 174.0, "train_episodes": 1.0}
-{"step": 431196, "dataset_size": 205.0, "train_return": 8.033984184265137, "train_length": 205.0, "train_episodes": 1.0}
-{"step": 431196, "dataset_size": 234.0, "train_return": 8.796098709106445, "train_length": 234.0, "train_episodes": 1.0}
-{"step": 431196, "dataset_size": 264.0, "train_return": 9.621146202087402, "train_length": 264.0, "train_episodes": 1.0}
-{"step": 431196, "dataset_size": 293.0, "train_return": 10.25739574432373, "train_length": 293.0, "train_episodes": 1.0}
-{"step": 431196, "dataset_size": 324.0, "train_return": 11.334173202514648, "train_length": 324.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 30.0, "train_return": 0.6991817355155945, "train_length": 30.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 64.0, "train_return": 2.0276906490325928, "train_length": 64.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 97.0, "train_return": 3.104468822479248, "train_length": 97.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 143.0, "train_return": 6.383889675140381, "train_length": 143.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 174.0, "train_return": 7.271869659423828, "train_length": 174.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 205.0, "train_return": 8.033984184265137, "train_length": 205.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 234.0, "train_return": 8.796098709106445, "train_length": 234.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 264.0, "train_return": 9.621146202087402, "train_length": 264.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 293.0, "train_return": 10.25739574432373, "train_length": 293.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 324.0, "train_return": 11.334173202514648, "train_length": 324.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 358.0, "train_return": 12.599749565124512, "train_length": 358.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 389.0, "train_return": 13.67652702331543, "train_length": 389.0, "train_episodes": 1.0}
-{"step": 438508, "dataset_size": 421.0, "train_return": 14.753305435180664, "train_length": 421.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 51.0, "train_return": 3.53115177154541, "train_length": 51.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 95.0, "train_return": 6.495909690856934, "train_length": 95.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 135.0, "train_return": 8.579609870910645, "train_length": 135.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 205.0, "train_return": 15.194461822509766, "train_length": 205.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 243.0, "train_return": 16.963497161865234, "train_length": 243.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 289.0, "train_return": 19.99118995666504, "train_length": 289.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 323.0, "train_return": 21.25676727294922, "train_length": 323.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 373.0, "train_return": 24.850849151611328, "train_length": 373.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 417.0, "train_return": 27.8785400390625, "train_length": 417.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 459.0, "train_return": 30.402767181396484, "train_length": 459.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 504.0, "train_return": 33.430458068847656, "train_length": 504.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 525.0, "train_return": 33.437381744384766, "train_length": 525.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 566.0, "train_return": 35.77281188964844, "train_length": 566.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 581.0, "train_return": 35.213340759277344, "train_length": 581.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 597.0, "train_return": 34.71680450439453, "train_length": 597.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 618.0, "train_return": 34.660797119140625, "train_length": 618.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 636.0, "train_return": 34.35305404663086, "train_length": 636.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 652.0, "train_return": 33.91944885253906, "train_length": 652.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 687.0, "train_return": 35.310890197753906, "train_length": 687.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 724.0, "train_return": 36.95405960083008, "train_length": 724.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 743.0, "train_return": 36.772186279296875, "train_length": 743.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 759.0, "train_return": 36.33857727050781, "train_length": 759.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 781.0, "train_return": 36.5343017578125, "train_length": 781.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 800.0, "train_return": 36.35242462158203, "train_length": 800.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 818.0, "train_return": 36.04468536376953, "train_length": 818.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 877.0, "train_return": 41.21208572387695, "train_length": 877.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 892.0, "train_return": 40.77847671508789, "train_length": 892.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 928.0, "train_return": 42.29578399658203, "train_length": 928.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 964.0, "train_return": 43.813087463378906, "train_length": 964.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 982.0, "train_return": 43.56828308105469, "train_length": 982.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1051.0, "train_return": 50.18313980102539, "train_length": 1051.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1092.0, "train_return": 52.45563507080078, "train_length": 1092.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1134.0, "train_return": 54.97986602783203, "train_length": 1134.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1152.0, "train_return": 54.79798889160156, "train_length": 1152.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1206.0, "train_return": 59.210201263427734, "train_length": 1206.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1268.0, "train_return": 65.1327896118164, "train_length": 1268.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1296.0, "train_return": 65.89490509033203, "train_length": 1296.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1312.0, "train_return": 65.52423095703125, "train_length": 1312.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1365.0, "train_return": 69.62178039550781, "train_length": 1365.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1412.0, "train_return": 72.90119934082031, "train_length": 1412.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1436.0, "train_return": 73.28572082519531, "train_length": 1436.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1534.0, "train_return": 85.12397766113281, "train_length": 1534.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1552.0, "train_return": 84.8791732788086, "train_length": 1552.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1651.0, "train_return": 96.78036499023438, "train_length": 1651.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1686.0, "train_return": 98.42353820800781, "train_length": 1686.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1724.0, "train_return": 100.25550842285156, "train_length": 1724.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1779.0, "train_return": 104.73064422607422, "train_length": 1779.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1794.0, "train_return": 104.17117309570312, "train_length": 1794.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1814.0, "train_return": 103.98929595947266, "train_length": 1814.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1831.0, "train_return": 103.55569458007812, "train_length": 1831.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1848.0, "train_return": 103.18502044677734, "train_length": 1848.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1869.0, "train_return": 103.12901306152344, "train_length": 1869.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1885.0, "train_return": 102.69540405273438, "train_length": 1885.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1922.0, "train_return": 104.33857727050781, "train_length": 1922.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 1966.0, "train_return": 107.11453247070312, "train_length": 1966.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2002.0, "train_return": 108.63185119628906, "train_length": 2002.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2060.0, "train_return": 113.73632049560547, "train_length": 2060.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2096.0, "train_return": 115.50535583496094, "train_length": 2096.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2148.0, "train_return": 119.2882308959961, "train_length": 2148.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2185.0, "train_return": 120.93141174316406, "train_length": 2185.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2208.0, "train_return": 121.06419372558594, "train_length": 2208.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2307.0, "train_return": 132.96539306640625, "train_length": 2307.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2407.0, "train_return": 145.05538940429688, "train_length": 2407.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2428.0, "train_return": 145.06231689453125, "train_length": 2428.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2452.0, "train_return": 145.38389587402344, "train_length": 2452.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2493.0, "train_return": 147.78225708007812, "train_length": 2493.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2545.0, "train_return": 151.75393676757812, "train_length": 2545.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2561.0, "train_return": 151.38327026367188, "train_length": 2561.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2575.0, "train_return": 150.7608642578125, "train_length": 2575.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2594.0, "train_return": 150.5789794921875, "train_length": 2594.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2644.0, "train_return": 154.29893493652344, "train_length": 2644.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2663.0, "train_return": 154.17999267578125, "train_length": 2663.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2705.0, "train_return": 156.7042236328125, "train_length": 2705.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2739.0, "train_return": 157.9698028564453, "train_length": 2739.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2802.0, "train_return": 163.89239501953125, "train_length": 2802.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2818.0, "train_return": 163.52171325683594, "train_length": 2818.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2837.0, "train_return": 163.33984375, "train_length": 2837.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2876.0, "train_return": 165.36061096191406, "train_length": 2876.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2930.0, "train_return": 169.58401489257812, "train_length": 2930.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2951.0, "train_return": 169.5909423828125, "train_length": 2951.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 2993.0, "train_return": 171.92637634277344, "train_length": 2993.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3026.0, "train_return": 173.00314331054688, "train_length": 3026.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3045.0, "train_return": 172.75833129882812, "train_length": 3045.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3085.0, "train_return": 174.90496826171875, "train_length": 3085.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3126.0, "train_return": 177.1145477294922, "train_length": 3126.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3164.0, "train_return": 178.88357543945312, "train_length": 3164.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3180.0, "train_return": 178.44996643066406, "train_length": 3180.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3199.0, "train_return": 178.20516967773438, "train_length": 3199.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3301.0, "train_return": 190.4210205078125, "train_length": 3301.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3335.0, "train_return": 191.74952697753906, "train_length": 3335.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3373.0, "train_return": 193.51856994628906, "train_length": 3373.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3389.0, "train_return": 193.14788818359375, "train_length": 3389.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3405.0, "train_return": 192.71429443359375, "train_length": 3405.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3439.0, "train_return": 194.0428009033203, "train_length": 3439.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3459.0, "train_return": 193.98678588867188, "train_length": 3459.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3501.0, "train_return": 196.38514709472656, "train_length": 3501.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3551.0, "train_return": 200.23095703125, "train_length": 3551.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3566.0, "train_return": 199.7344207763672, "train_length": 3566.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3609.0, "train_return": 202.19570922851562, "train_length": 3609.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3645.0, "train_return": 203.83889770507812, "train_length": 3645.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3673.0, "train_return": 204.60101318359375, "train_length": 3673.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3716.0, "train_return": 207.18817138671875, "train_length": 3716.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3815.0, "train_return": 219.1522979736328, "train_length": 3815.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3838.0, "train_return": 219.41094970703125, "train_length": 3838.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3891.0, "train_return": 223.69729614257812, "train_length": 3891.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3928.0, "train_return": 225.52926635742188, "train_length": 3928.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3951.0, "train_return": 225.7249755859375, "train_length": 3951.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3975.0, "train_return": 225.98362731933594, "train_length": 3975.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 3995.0, "train_return": 225.8017578125, "train_length": 3995.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4020.0, "train_return": 226.186279296875, "train_length": 4020.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4055.0, "train_return": 227.32598876953125, "train_length": 4055.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4139.0, "train_return": 236.8357391357422, "train_length": 4139.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4191.0, "train_return": 240.7445068359375, "train_length": 4191.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4235.0, "train_return": 243.45751953125, "train_length": 4235.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4259.0, "train_return": 243.7790985107422, "train_length": 4259.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4277.0, "train_return": 243.59722900390625, "train_length": 4277.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4299.0, "train_return": 243.7300262451172, "train_length": 4299.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4335.0, "train_return": 245.24732971191406, "train_length": 4335.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4356.0, "train_return": 245.19131469726562, "train_length": 4356.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4456.0, "train_return": 257.40716552734375, "train_length": 4456.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4474.0, "train_return": 257.2253112792969, "train_length": 4474.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4489.0, "train_return": 256.728759765625, "train_length": 4489.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4533.0, "train_return": 259.37884521484375, "train_length": 4533.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4627.0, "train_return": 270.5248718261719, "train_length": 4627.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4726.0, "train_return": 282.4889831542969, "train_length": 4726.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4771.0, "train_return": 285.327880859375, "train_length": 4771.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4868.0, "train_return": 296.97735595703125, "train_length": 4868.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4921.0, "train_return": 301.1378173828125, "train_length": 4921.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 4958.0, "train_return": 303.03271484375, "train_length": 4958.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 5007.0, "train_return": 306.5638732910156, "train_length": 5007.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 5027.0, "train_return": 306.50787353515625, "train_length": 5027.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 5050.0, "train_return": 306.640625, "train_length": 5050.0, "train_episodes": 1.0}
+{"step": 0, "dataset_size": 5072.0, "train_return": 306.7734375, "train_length": 5072.0, "train_episodes": 1.0}
+{"step": 20000}
+{"step": 20000, "eval_return": 2.297356778383255, "eval_length": 164.7, "eval_episodes": 10.0}
