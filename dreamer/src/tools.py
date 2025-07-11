@@ -93,8 +93,15 @@ class Logger:
             self._writer.add_image(name, value, step)
         for name, value in self._videos.items():
             name = name if isinstance(name, str) else name.decode("utf-8")
+            print(f"[Logger] Attempting to log video: {name}, shape: {value.shape}")
+            
+            if value.ndim != 5:
+                print(f"[Logger] Skipping video {name}, expected 5D but got {value.shape}")
+                continue
+
             if np.issubdtype(value.dtype, np.floating):
                 value = np.clip(255 * value, 0, 255).astype(np.uint8)
+
             B, T, H, W, C = value.shape
             value = value.transpose(1, 4, 2, 0, 3).reshape((1, T, C, H, B * W))
             self._writer.add_video(name, value, step, 16)
@@ -346,7 +353,7 @@ def from_generator(generator, batch_size):
             except Exception as e:
                 print(f"Processing key: {k}")
                 print(f"encountered {e}")
-                exit()
+                continue
             target_shape = shapes.max(axis=0)
             samples = [_pad_to_shape(s, target_shape) for s in samples]
             stacked[k] = np.stack(samples, axis=0)

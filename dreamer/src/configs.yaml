@@ -12,7 +12,7 @@ defaults:
   eval_episode_num: 10
   log_every: 1000.0
   reset_every: 0
-  device: "cuda:0"
+  device: "cpu:0"
   compile: False
   precision: 32
   debug: True
@@ -26,7 +26,7 @@ defaults:
   time_limit: 1000
   grayscale: False
   prefill_agent: "gap_follower"
-  prefill: 5000
+  prefill: 500
   reward_EMA: True
   # Model
   dyn_hidden: 512

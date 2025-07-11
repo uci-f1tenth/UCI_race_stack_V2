@@ -190,6 +190,7 @@ def main(config):
     config.traindir.mkdir(parents=True, exist_ok=True)
     config.evaldir.mkdir(parents=True, exist_ok=True)
     step = count_steps(config.traindir)
+    print("Steps in train directory:", step)
     # step in logger is environmental step
     logger = tools.Logger(logdir, config.action_repeat * step)
 
@@ -269,21 +270,7 @@ def main(config):
         agent._should_pretrain._once = False
 
     print(len(train_eps), "episodes in train_eps after loading.")
-    # if len(train_eps) == 0:
-    #     print("🛠️ Bootstrapping replay buffer with initial rollouts...")
-    #     # Freeze training to ensure agent acts without dataset dependency
-    #     rollout_policy = functools.partial(agent, training=False)
-    #     tools.simulate(
-    #         rollout_policy,
-    #         train_envs,
-    #         train_eps,
-    #         config.traindir,
-    #         logger,
-    #         steps=config.batch_length * config.batch_size  # enough to fill at least one batch
-    #     )
-    #     print(f"Bootstrapped: train_eps contains {len(train_eps)} episodes now.")
 
-    # make sure eval will be executed once after config.steps
     print(f"{agent._step} < {config.steps}")
     while agent._step < config.steps + config.eval_every:
         logger.write()
