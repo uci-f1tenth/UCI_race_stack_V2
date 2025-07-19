@@ -348,12 +348,24 @@ def from_generator(generator, batch_size):
             for i in range(1, len(samples)):
                 first, samples[i] = _harmonise_rank(first, samples[i])
             samples[0] = first  # save possibly modified first
+            
             try:
                 shapes = np.array([s.shape for s in samples])
             except Exception as e:
-                print(f"Processing key: {k}")
-                print(f"encountered {e}")
-                continue
+                print("[ERROR] Could not create shapes array due to inconsistent shapes")
+                print(f"  Exception: {e}")
+                print(f"  Key: {k}")
+                print("  Sample shapes:")
+                for i, s in enumerate(samples):
+                    if hasattr(s, "shape"):
+                        print(f"    [{i}] shape: {s.shape}, dtype: {s.dtype}")
+                    else:
+                        print(f"    [{i}] not a valid ndarray (type={type(s)})")
+                print("  Offending sample values (first few):")
+                for i, s in enumerate(samples[:3]):
+                    print(f"    [{i}]: {repr(s)[:100]}")
+                raise
+
             target_shape = shapes.max(axis=0)
             samples = [_pad_to_shape(s, target_shape) for s in samples]
             stacked[k] = np.stack(samples, axis=0)
@@ -363,6 +375,9 @@ def from_generator(generator, batch_size):
         print("yielded stacked")
 
 def sample_episodes(episodes, length, seed=0):
+    print("Episode keys:", list(episodes.keys()))
+    if not episodes:
+        raise RuntimeError("No episodes available to sample.")
     np_random = np.random.RandomState(seed)
     while True:
         size = 0
@@ -413,40 +428,86 @@ def sample_episodes(episodes, length, seed=0):
                 if "is_first" in ret:
                     ret["is_first"][size] = True
             size = len(next(iter(ret.values())))
+        # Double checking because Dreamer is stupid
+        for k, v in ret.items():
+            v = np.array(v)
+            T = v.shape[0]
+            pad_len = max(0, length - T)
+            if pad_len > 0:
+                pad = np.zeros((pad_len,) + v.shape[1:], dtype=v.dtype)
+                v = np.concatenate([v, pad], axis=0)
+            elif pad_len < 0:
+                v = v[:length]
+            ret[k] = v
+        # Triple check in case Dreamer is really stupid
+        bad_sample = False
+        for k, v in ret.items():
+            if not isinstance(v, np.ndarray):
+                print(f"[WARNING] Key {k} is not ndarray.")
+                bad_sample = True
+                break
+            if v.shape[0] != length:
+                print(f"[WARNING] Key {k} has wrong length: {v.shape[0]} != {length}")
+                bad_sample = True
+                break
+            if k == "action" and (v.ndim != 2 or v.shape[-1] != 2):
+                print(f"[WARNING] Key {k} has invalid shape: {v.shape}")
+                bad_sample = True
+                break
+        if bad_sample:
+            print("[INFO] Skipping malformed batch.")
+            continue
+
         yield ret
 
 
 def load_episodes(directory, limit=None, reverse=True):
+
     directory = pathlib.Path(directory).expanduser()
     episodes = collections.OrderedDict()
     total = 0
+
+    filenames = sorted(directory.glob("*.npz"))
     if reverse:
-        for filename in reversed(sorted(directory.glob("*.npz"))):
-            try:
-                with filename.open("rb") as f:
-                    episode = np.load(f)
-                    episode = {k: episode[k] for k in episode.keys()}
-            except Exception as e:
-                print(f"Could not load episode: {e}")
-                continue
-            # extract only filename without extension
-            episodes[str(os.path.splitext(os.path.basename(filename))[0])] = episode
-            total += len(episode["reward"]) - 1
-            if limit and total >= limit:
-                break
-    else:
-        for filename in sorted(directory.glob("*.npz")):
-            try:
-                with filename.open("rb") as f:
-                    episode = np.load(f)
-                    episode = {k: episode[k] for k in episode.keys()}
-            except Exception as e:
-                print(f"Could not load episode: {e}")
-                continue
-            episodes[str(filename)] = episode
-            total += len(episode["reward"]) - 1
-            if limit and total >= limit:
-                break
+        filenames = reversed(filenames)
+
+    for filename in filenames:
+        try:
+            with filename.open("rb") as f:
+                episode = np.load(f)
+                episode = {k: episode[k] for k in episode.keys()}
+        except Exception as e:
+            print(f"[ERROR] Could not load episode '{filename.name}': {e}")
+            continue
+
+        action = episode.get("action", None)
+        if action is None:
+            print(f"[WARNING] Skipping {filename.name}: missing 'action'")
+            continue
+        if not isinstance(action, np.ndarray):
+            print(f"[WARNING] Skipping {filename.name}: 'action' is not an array")
+            continue
+        if action.ndim != 2 or action.shape[-1] != 2:
+            print(f"[WARNING] Skipping {filename.name}: invalid 'action' shape {action.shape}")
+            continue
+        if action.dtype != np.float32:
+            print(f"[WARNING] Skipping {filename.name}: invalid 'action' dtype {action.dtype}")
+            continue
+
+        if "reward" not in episode or len(episode["reward"]) < 2:
+            print(f"[WARNING] Skipping {filename.name}: short or missing 'reward'")
+            continue
+
+        for k, v in episode.items():
+            print(f"[DEBUG] {filename.name} key '{k}': shape={np.shape(v)}, dtype={v.dtype}")
+
+        key = str(os.path.splitext(os.path.basename(filename))[0])
+        episodes[key] = episode
+        total += len(episode["reward"]) - 1
+
+        if limit and total >= limit:
+            break
+
     return episodes
 
 

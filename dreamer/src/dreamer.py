@@ -57,6 +57,8 @@ class Dreamer(nn.Module):
         )[config.expl_behavior]().to(self._config.device)
 
     def __call__(self, obs, reset, state=None, training=True):
+        print(f"[DEBUG] Agent step count: {self._step}")
+        print(f"[DEBUG] Dataset: {self._dataset}")
         step = self._step
         if training:
             steps = (
@@ -175,6 +177,7 @@ def make_env(config, mode, gui=True):
     return env
 
 def main(config):
+    torch.backends.cudnn.benchmark = True
     tools.set_seed_everywhere(config.seed)
     if config.deterministic_run:
         tools.enable_deterministic_run()
