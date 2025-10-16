@@ -9,7 +9,7 @@ from torch import distributions as torchd
 
 import tools
 
-DEVICE = "cpu:0"
+DEVICE = "cuda:0"
 
 
 class RSSM(nn.Module):
